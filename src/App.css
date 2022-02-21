@@ -1,0 +1,23 @@
+.div {
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 50px;
+}
+
+.mr-8px {
+  margin-right: 8px;
+}
+
+.mb-16px {
+  margin-bottom: 16px;
+}
+
+.mb-32px {
+  margin-bottom: 32px;
+}
+
+.flex {
+  display: flex;
+}
