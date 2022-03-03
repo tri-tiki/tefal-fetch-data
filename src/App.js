@@ -114,7 +114,14 @@ function App() {
 
       playlists = await Promise.all(playlists);
 
-      setJsonData((prev) => ({ ...prev, playlists }));
+      setJsonData({
+        // Cách chỉ lấy videos trong playlists:
+        // B1. Lấy all videos
+        // B2. Map lại vào các playlists
+        // B3. Lấy ngược videos từ playlists ra
+        videos: playlists.map((playlist) => playlist.items).flat(),
+        playlists,
+      });
     } catch (error) {
       console.log('Get playlists fail: ', error);
     }
